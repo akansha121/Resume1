@@ -172,7 +172,7 @@ function dashboard1(id, fData){
             .attr("y", function(d) { return y(d[1])-5; })
             .attr("text-anchor", "middle");
         
-//         function mouseover(d){  // utility function to be called on mouseover.
+        function mouseover(d){  // utility function to be called on mouseover.
 //             // filter for selected state.
             var st = fData.filter(function(s){ return s.State == d[0];})[0],
                  nD = d3.keys(st.freq).map(function(s){ return {type:s, freq:st.freq[s]};});
@@ -315,13 +315,11 @@ Autonomy requires autonomy, to be able to handle a situation or process independ
 -->
 <script>
 var freqData=[
-{State:'Bash',freq:{Practical:5, Theoretical:6, Autonomous:4}}
-,{State:'C#',freq:{Practical:3, Theoretical:1, Autonomous:1}}
+{State:'C',freq:{Practical:5, Theoretical:6, Autonomous:4}}
+,{State:'C++',freq:{Practical:3, Theoretical:1, Autonomous:1}}
 ,{State:'CSS',freq:{Practical:10, Theoretical:10, Autonomous:10}}
 ,{State:'Git',freq:{Practical:5, Theoretical:7, Autonomous:4}}
 ,{State:'HTML',freq:{Practical:10, Theoretical:10, Autonomous:10}}
-,{State:'JavaScript',freq:{Practical:10, Theoretical:8, Autonomous:8}}
-,{State:'PHP',freq:{Practical:4, Theoretical:2, Autonomous:7}}
 ,{State:'Python',freq:{Practical:8, Theoretical:8, Autonomous:8}}
 ,{State:'SQL',freq:{Practical:10, Theoretical:6, Autonomous:10}}
 ];
